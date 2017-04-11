@@ -32,9 +32,9 @@ The goals / steps of this project are the following:
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/tacticalhombre/CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier.ipynb)
 
@@ -66,7 +66,7 @@ I normalized the data and displayed samples. The code for this step is contained
 
 Fortunately, the data provided has already been split into training, validation, and testing.  So, no need to split the data. 
 
-First, I created fake data by applying brightness adjustment, histogram equalization, or gamma adjustment.  Which one to perform is done randomly.  I took the class that has the max number of samples and use this number as a basis for adding data for each class.  If a classhas less than this number of samples, I keep creating samples for that class.  In the end, each of the 43 classes have equal number of images samples. Altogether, there are 51631 data points. Code for this is contained in cells 10-12.
+First, I created fake data by applying brightness adjustment, histogram equalization, or gamma adjustment.  Which one to perform is done randomly.  I took the class that has the max number of samples and use this number as a basis for adding data for each class.  If a class has less than this number of samples, I keep creating samples for that class.  In the end, each of the 43 classes have an equal number of image samples. Altogether, there are 51631 data points. Code for this is contained in cells 10-12.
  
 #### 3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -99,7 +99,7 @@ My final model is based on the LeNet model with the addition of dropouts with a 
 
 The code for training the model is located in the 17th & 18th cell of the ipython notebook. 
 
-Trained for 23 epochs, batch size 128, initial earning rate of 0.0005
+Trained for 23 epochs, batch size 128, initial learning rate of 0.0005
 
 Optimizer used is AdamOptimizer.
 
@@ -126,7 +126,7 @@ The results of predicting the 5 new traffic signs are provided in the Notebook. 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the 24th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 25th cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
@@ -143,9 +143,9 @@ Here are the results of the prediction:
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 25th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+Below are the top 3 predictions for each of the new images:
 
 
 
