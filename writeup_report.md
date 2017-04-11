@@ -124,36 +124,37 @@ Although all the 5 images searched from the web are clear, 3 of the 5 images are
 The results of predicting the 5 new traffic signs are provided in the Notebook.  The model only managed to make 1 correct prediction - 20% accuracy.
 
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 24th cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed Limit (20 km/h)      		| Turn Left Ahead   									| 
+| Right-of-way at next intersection     			| General Caution 										|
+| Children Crossing				| Traffic Signals											|
+| Roundabout Mandatory	      		| Roundabout Mandatory				 				|
+| Ahead Only			| Turn Right Ahead      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
 
 
-For the second image ... 
+| Image			        |     Prediction	(top)        					|  2nd Prediction | 3rd Prediction
+|:---------------------:|:---------------------------------------------:|:-----------------------------------:| :-----------------------------------:|  
+| 0 - Speed Limit (20 km/h)      		| 34 - Turn Left Ahead - 43.32%   									| Sign 18 - 20.48 %| Sign 17 - 8.35%|
+| 11 - Right-of-way at next intersection     			| 18 - General Caution - 43.90%										| Sign 22 - 11.05%  | Sign 28 - 10.07%
+| 28 - Children Crossing				| 26 - Traffic Signals	- 21.68%										| Sign 11 - 15.75%  | Sign 37 - 11.02%  |
+| 40 - Roundabout Mandatory	      		| 40 - Roundabout Mandatory - 99.99%				 				|  Sign 37 - 0.01% | Sign 39 - 0.000017% |
+| 35 - Ahead Only			| 33 - Turn Right Ahead  - 99.98%    							|  Sign 34 -  0.01%|  Sign 35 - 0.0096%|
+
+
